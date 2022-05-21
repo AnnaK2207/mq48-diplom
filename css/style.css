@@ -58,10 +58,11 @@ input {
   display: flex;
 }
 
-.popup-container {
+.popup-wrapper{
   margin: auto;
   width: 390px;
 }
+
 
 .popup-close-button {
   display: block;
@@ -978,18 +979,29 @@ input {
   .trend-post:nth-child(n + 3) {
     margin-top: 5px;
   }
+
+  .popup-wrapper {
+    margin: auto;
+    width: 390px;
+ }
+
 }
 
 @media (min-width: 641px) and (max-width: 1199px),
 (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+
+ .popup-wrapper {
+    margin: auto;
+    width: 390px;
+ }
 
   .popup-title {
     font-size: 18px;
   }
 
   .popup-close-button {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-bottom: 10px;
   }
 
@@ -1073,12 +1085,15 @@ input {
 
   .page {
     max-width: 1199px;
-    padding: 45px 33px 0;
+    min-width: 697px;
+    padding: 45px 34px 0;
   }
 
   .content {
     width: 100%;
-    margin-right: 35px;
+    max-width: 392px;
+    margin-right: 30px;
+    flex-grow: 1;
   }
 
   .content-post {
@@ -1088,6 +1103,17 @@ input {
     border-bottom: 3px solid #eeeeee;
   }
 
+
+  .content-post-tags {
+    margin-bottom: 16px;
+  }
+
+  .content-post-title {
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 33px;
+  }
+
   .content-post:last-child {
     border-bottom: none;
   }
@@ -1095,33 +1121,50 @@ input {
   .content-post-image {
     min-width: 0%;
     width: 100%;
-    margin-bottom: 10px;
+    max-width: 390px;
+    margin-bottom: 16px;
   }
 
   .content-post-info {
     width: 100%;
     margin-left: 0;
   }
-
-  .content-post-title {
-    margin-top: 10px;
-    margin-bottom: 30px;
-
-    font-size: 17px;
-    line-height: 1.3;
-  }
+ 
 
   .content-post-footnote {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 35px;
   }
 
   .content-post-text {
     margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: normal;
+    
+  }
+
+  .content-post-text>p:not(:first-child) {
+    margin-top: 16px;
   }
 
   .page-footnote {
     max-width: 1199px;
     padding: 8px 33px 60px;
+  }
+
+  .sidebar {
+    max-width: 270px;
+  }
+
+  .search {
+    margin-top: 65px;
+    width: 100%;
+    max-width: 271px;
+  }
+
+  .sidebar-title {
+   margin-bottom: 20px;
   }
 
   .shop-title {
@@ -1137,21 +1180,22 @@ input {
   }
 
   .footer {
-    margin-top: 55px;
+    margin-top: 51px;
   }
 
   .socials {
-    margin-bottom: 45px;
+    margin-bottom: 36px;
+    margin-top: 30px;
   }
 }
 
 @media (max-width: 640px),
 (max-width: 767px) and (orientation: landscape) {
 
-  .popup-container {
+  .popup-wrapper {
     min-width: 300px;
     max-width: 330px;
-  }
+ }
 
   .popup-feedback {
     padding: 25px 25px;
@@ -1162,8 +1206,8 @@ input {
   }
 
   .popup-close-button {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-bottom: 6px;
   }
 
@@ -1278,6 +1322,7 @@ input {
 
   .content {
     width: 100%;
+    flex-grow: 1;
   }
 
   .content-post {
@@ -1316,7 +1361,7 @@ input {
   }
 
   .content-post-text:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .sidebar {
@@ -1326,7 +1371,6 @@ input {
 
   .sidebar-title {
     margin-bottom: 25px;
-
     font-size: 16px;
   }
 
@@ -1357,7 +1401,6 @@ input {
 
   .good-card {
     width: 100%;
-    margin-top: 27px;
   }
 
   .good-card-image {
@@ -1386,4 +1429,9 @@ input {
   .trend-post:nth-child(n + 2) {
     margin-top: 4px;
   }
+
+  .popup-wrapper {
+    margin: auto;
+    width: 329px;
+ }
 }
